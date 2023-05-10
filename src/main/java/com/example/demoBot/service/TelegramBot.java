@@ -26,6 +26,9 @@ public class TelegramBot extends TelegramLongPollingBot {
 
                 case "/start":
                     startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
+                    break;
+                default:
+                    sendMessage(chatId, "Такой команды не предусмотрено.");
 
             }
         }
